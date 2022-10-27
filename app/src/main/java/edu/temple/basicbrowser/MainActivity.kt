@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         // nafire22
         goButton.setOnClickListener() {
             // fix url in address bar
-            urlEditText.text = fixUrl(urlEditText.text.toString())
+            //urlEditText.text = fixUrl(urlEditText.text.toString())
             // load the url
             webView.loadUrl(fixUrl(urlEditText.text.toString()))
         }
