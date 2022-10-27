@@ -26,15 +26,16 @@ class MainActivity : AppCompatActivity() {
         // Allow your browser to intercept hyperlink clicks
         webView.webViewClient = WebViewClient()
 
+        // nafire22
+        goButton.setOnClickListener() {
+            // fix url in address bar
+            urlEditText.text = fixUrl(urlEditText.text.toString())
+            // load the url
+            webView.loadUrl(fixUrl(urlEditText.text.toString()))
+        }
+
     }
 
-    // nafire22
-    goButton.setOnClickListener() {
-        // fix url in address bar
-        urlEditText.text = fixUrl(urlEditText.text.toString())
-        // load the url
-        webView.loadUrl(fixUrl(urlEditText.text.toString()))
-    }
 
     // lduran2
     fun fixUrl(url : String) =
