@@ -27,4 +27,16 @@ class MainActivity : AppCompatActivity() {
         webView.webViewClient = WebViewClient()
 
     }
+
+    fun fixUrl(url : String) =
+        // if protocol on URL, return URL
+        if (url.contains(":"))
+            url
+        else
+            // if not, append https protocol
+            StringBuilder()
+                .append("https://")
+                .append(url)
+                .toString()
+
 }
